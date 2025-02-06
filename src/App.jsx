@@ -4,7 +4,10 @@ import Vapi from "@vapi-ai/web"
 import { useState } from 'react'
 import {IMEPrompt} from "./prompt"
 
-const myVapi = new Vapi("7ef6d611-72a8-4e5a-8e59-616bddf64b35")
+
+const VAPI_KEY = import.meta.VITE_VAPI_KEY
+
+const myVapi = new Vapi(VAPI_KEY)
 
 function App() {
   const [isPaused, setIsPaused] = useState(false)
